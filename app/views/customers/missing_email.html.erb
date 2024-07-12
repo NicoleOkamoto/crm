@@ -6,11 +6,7 @@
 </div>
 
 <div class="columns is-multiline">
-  <% if @customers.any? %>
-    <% @customers.each do |customer| %>
-      <%= render partial: 'customer', locals: { customer: customer } %>
-    <% end %>
-  <% else %>
-    <p>No customers with missing emails found.</p>
+  <% @customers.each do |customer| %>
+    <%= render partial: 'customer', locals: { customer: customer } %>
   <% end %>
 </div>
