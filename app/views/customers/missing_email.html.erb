@@ -1,0 +1,16 @@
+<h1 class="title has-text-primary">Customers with Missing Emails</h1>
+
+<div class="buttons">
+<button class="button is-link is-light"> <%= link_to 'All Customers', root_path %></button>
+<button class="button is-link is-light">  <%= link_to 'Alphabetized Customers', alphabetized_customers_path %></button>
+</div>
+
+<div class="columns is-multiline">
+  <% if @customers.any? %>
+    <% @customers.each do |customer| %>
+      <%= render partial: 'customer', locals: { customer: customer } %>
+    <% end %>
+  <% else %>
+    <p>No customers with missing emails found.</p>
+  <% end %>
+</div>

@@ -1,0 +1,12 @@
+<h1 class="title has-text-primary">Customers</h1>
+
+<div class="buttons">
+<button class="button is-link is-light"><%= link_to 'Customers with Missing Emails', missing_email_customers_path %></button>
+<button class="button is-link is-light"><%= link_to 'Alphabetized Customers', alphabetized_customers_path %></button>
+</div>
+
+<div class="columns is-multiline">
+  <% @customers.each do |customer| %>
+    <%= render partial: 'customer', locals: { customer: customer } %>
+  <% end %>
+</div>
