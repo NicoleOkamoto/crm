@@ -1,19 +1,16 @@
 @import "bulma";
 
-// Add your custom styles here
-.custom-box {
-  border: 1px solid #ccc;
-  padding: 10px;
-}
-
-// Example of extending Bulma's utility classes
-.custom-image {
-  @extend .is-64x64;
-  border-radius: 50%;
-}
-
 .bordered-container {
   border: 1px solid #dbdbdb; /* Light grey border */
   padding: 20px; /* Some padding to space out the content */
   border-radius: 6px; /* Rounded corners */
+}
+
+.card {
+  height: 400px; /* Fixed height for all cards */
+}
+
+.card .card-content {
+  max-height: 300px; /* Maximum height for content */
+  overflow: hidden; /* Hide overflow content */
 }

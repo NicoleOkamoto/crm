@@ -1,28 +1,26 @@
 <div class="column is-one-third">
-  <div class="box">
-  <div class="media-content">
-
+  <div class="card">
+    <div class="card-image">
+      <figure  class="image is-3by4">
         <% if customer.image.attached? %>
-          <%= image_tag url_for(customer.image), size: "150x150", class: "image is-128x128
-" %>
+          <%= image_tag url_for(customer.image)%>
         <% else %>
-          <%= image_tag "default-image.png", size: "182x97", class: "image is-128x128
-" %>
+          <%= image_tag "default-image.png"%>
         <% end %>
-
-
-        <div class="content">
-          <p>
-            <strong><%= customer.full_name %></strong>
-            <br>
-            <%= customer.phone_number %>
-            <br>
-            <%= customer.email %>
-            <br>
-            <%= customer.notes %>
-          </p>
-        </div>
+      </figure>
+    </div>
+    <div class="card-content">
+      <div class="content">
+        <p>
+          <strong><%= customer.full_name %></strong>
+          <br>
+          <%= customer.phone_number %>
+          <br>
+          <%= customer.email %>
+          <br>
+          <%= customer.notes %>
+        </p>
       </div>
-    </article>
+    </div>
   </div>
 </div>

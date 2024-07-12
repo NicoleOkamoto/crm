@@ -10,7 +10,7 @@ ActiveAdmin.register Customer do
     column :notes
     column :image do |customer|
       if customer.image.attached?
-        image_tag url_for(customer.image), size: "50x50"
+        image_tag url_for(customer.image), size: "75x100"
       end
     end
     actions
@@ -35,7 +35,7 @@ ActiveAdmin.register Customer do
       row :notes
       row :image do |customer|
         if customer.image.attached?
-          image_tag url_for(customer.image), size: "150x150"
+          image_tag url_for(customer.image), size: "150x200"
         end
       end
     end
